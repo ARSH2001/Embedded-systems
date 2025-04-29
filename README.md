@@ -1,97 +1,102 @@
-# Intelligent Embedded System for Monitoring and Analysis of Electrocardiographic Signals and Warning of Potential Risks
+# Intelligent Embedded System for Monitoring and Analysis of Electrocardiographic Signals - 2024-2025 🩺💻
 
-## Project Overview
-This project develops an intelligent embedded system for monitoring electrocardiogram (ECG) signals and providing real-time warnings in case of abnormalities. The system is designed to aid healthcare professionals in the early detection of potential heart issues by analyzing ECG signals using embedded systems and machine learning algorithms.
-
-## Sections
-
-### 1. **Introduction**
-Provide a brief introduction about the project's motivation, scope, and goals. Contributors can edit this section by updating the purpose of the project or any relevant background information.
-
-- **How to Edit**: Update the background, motivation, and the intended impact of the system.
-
-### 2. **Model**
-   - **Dataset Used**: 
-     - Include a summary of the dataset (ECG5000, 5000 records) and how it was used (training and testing).
-     - **How to Edit**: Contributors can update this by adding new datasets or updating the current dataset description if new records are added or improvements are made.
-   
-   - **Data Preprocessing**: 
-     - Explain the preprocessing steps taken to normalize and split the data.
-     - **How to Edit**: Update the data processing techniques if new approaches are added, such as a new scaling method or data cleaning process.
-
-   - **Algorithm**: 
-     - Description of the neural network architecture used for anomaly detection.
-     - **How to Edit**: If a new model is introduced or an existing one is modified, this section should be updated with the new algorithm and performance metrics.
-
-   - **Model Output for Hardware**:
-     - Explain how the model is converted to TensorFlow Lite (tflite) format for deployment.
-     - **How to Edit**: Provide details on any changes in deployment or hardware-specific changes.
-
-### 3. **Hardware**
-   - **ESP32 Module**: 
-     - Explanation of the ESP32 module and its capabilities.
-     - **How to Edit**: Update any information about new versions of the ESP32 or if there are additional peripherals used in the system.
-
-   - **ECG Sensor**: 
-     - Description of the ECG sensor used to capture heart muscle signals.
-     - **How to Edit**: Add details if new sensors are integrated or if specifications change.
-
-   - **Development Environments**:
-     - Instructions for setting up Arduino IDE, ESP-IDF, and platformIO for programming the ESP32.
-     - **How to Edit**: Update this if new development environments are added or if installation steps change.
-
-   - **Wi-Fi and Server Communication**:
-     - Information about how the ESP32 connects to Wi-Fi and sends data to a server.
-     - **How to Edit**: Contributors can update this if the network communication protocol changes or new libraries are added.
-
-### 4. **Software**
-   - **API**: 
-     - Backend API built using Django REST Framework to handle ECG data and alerts.
-     - **How to Edit**: Update API endpoints, add new routes, or adjust the request/response format.
-
-   - **Telegram Bot**: 
-     - Integration of the Telegram bot for real-time notifications.
-     - **How to Edit**: Add new bot features or update command syntax if modifications are made to the bot functionality.
-
-### 5. **Validation and Testing**
-   - **Validation**:
-     - Information on how the system is validated using real-time data.
-     - **How to Edit**: Update this section with new testing methods or performance improvements.
+[![Made With](https://img.shields.io/badge/Made%20with-Python%2C%20TensorFlow%2C%20ESP32-blue)](https://shields.io/)
+[![Institution](https://img.shields.io/badge/Institution-Your%20Institution%20Name-red)](https://shields.io/)
 
 ---
 
-## Installation
+## 📚 Table of Contents
 
-To set up the project locally, follow these steps:
+- [About The Project](#about-the-project)
+- [Project Components](#project-components)
+  - [Model Development](#model-development)
+  - [Hardware Implementation](#hardware-implementation)
+  - [Software Integration](#software-integration)
+  - [Validation and Testing](#validation-and-testing)
+- [How to Use](#how-to-use)
+
+---
+
+## 📖 About The Project
+
+This repository contains the implementation of an intelligent embedded system for real-time monitoring and analysis of electrocardiographic (ECG) signals. The system leverages machine learning and embedded hardware to detect abnormalities in ECG data and issue warnings for potential heart-related risks. Developed as part of a project at **[Your Institution Name]**, it integrates **Python**, **TensorFlow Lite**, **ESP32**, and **Django** to provide a robust solution for healthcare applications.
+
+---
+
+## 📝 Project Components
+
+### Model Development
+
+This section covers the machine learning components used for ECG signal analysis:
+
+| Component | Description |
+|-----------|-------------|
+| **Dataset** | Utilizes the ECG5000 dataset (5000 records) for training and testing anomaly detection models. |
+| **Preprocessing** | Normalizes and splits ECG data for model training, including noise reduction and feature extraction. |
+| **Algorithm** | Implements a neural network for anomaly detection, optimized for embedded deployment. |
+| **Model Output** | Converts the trained model to TensorFlow Lite (tflite) format for efficient execution on the ESP32. |
+
+> 📄 Detailed code and datasets are available in the [Model directory](https://github.com/ARSH2001/Embedded-systems/tree/main/Model).
+
+### Hardware Implementation
+
+This section details the hardware components used in the system:
+
+| Component | Description |
+|-----------|-------------|
+| **ESP32 Module** | Employs the ESP32 microcontroller for processing and communication tasks. |
+| **ECG Sensor** | Captures heart muscle signals for real-time monitoring. |
+| **Development Environment** | Uses Arduino IDE, ESP-IDF, or PlatformIO for programming the ESP32. |
+| **Wi-Fi Communication** | Connects the ESP32 to a server via Wi-Fi for data transmission. |
+
+> 📄 Hardware schematics and setup instructions are available in the [Hardware directory](https://github.com/ARSH2001/Embedded-systems/tree/main/Hardware).
+
+### Software Integration
+
+This section describes the software components for data handling and user interaction:
+
+| Component | Description |
+|-----------|-------------|
+| **API** | Backend API built with Django REST Framework to manage ECG data and alerts. |
+| **Telegram Bot** | Provides real-time notifications and access to patient records via Telegram. |
+
+> 📄 API documentation and bot setup are available in the [Software directory](https://github.com/ARSH2001/Embedded-systems/tree/main/Software).
+
+### Validation and Testing
+
+This section outlines the validation and testing procedures:
+
+| Component | Description |
+|-----------|-------------|
+| **Validation** | Tests the system with real-time ECG data to ensure accurate anomaly detection. |
+| **Testing** | Evaluates model performance and hardware reliability under various conditions. |
+
+> 📄 Test results and validation scripts are available in the [Validation directory](https://github.com/ARSH2001/Embedded-systems/tree/main/Validation).
+
+---
+
+## 🚀 How to Use
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/ARSH2001/Embedded-systems.git
    cd Embedded-systems
-2. Install the required libraries and dependencies:
-- For ESP32 development, use Arduino IDE, ESP-IDF, or platformIO.
-
-4. Convert the trained model to TensorFlow Lite format (tflite).
-
-5. Set up the Django backend and PostgreSQL:
-
-- Install Python dependencies: pip install -r requirements.txt
-
-6. Run the Django server and the Telegram bot.
-
---- 
-# **Usage**
-Once the system is set up, it will:
-
-- Monitor ECG signals from the sensor.
-- Alert healthcare professionals when abnormalities are detected.
-- Provide real-time access to patient records and reports via the Telegram bot.
---- 
-# **References**
+2. Install required dependencies
+3. Set up the ESP32 development environment:
+   - Install Arduino IDE, ESP-IDF, or PlatformIO.
+   - Flash the ESP32 with the provided firmware.
+4. Convert the trained model to TensorFlow Lite:
+   - Follow the scripts in the Model directory.
+5. Set up the Django backend:
+   ```bash
+      python manage.py runserver
+6. Configure and run the Telegram bot:
+   - Update the bot token and settings in the Software directory.
+7. Run the system to monitor ECG signals and receive alerts.
+---
+## 📚 References
 
 - [TensorFlow Lite for ESP32](https://github.com/atomic14/tensorflow-lite-esp32)
 - [ESP32 HTTP POST/GET Requests](https://randomnerdtutorials.com/esp32-http-get-post-arduino/)
 - [ECG5000 Dataset](https://timeseriesclassification.com/description.php?Dataset=ECG5000)
 - [ECG Signal Processing GitHub](https://github.com/pr1266/iot_ECG_signals_process/blob/master/ecg.csv)
-
-
