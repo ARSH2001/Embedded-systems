@@ -1,7 +1,7 @@
 # Intelligent Embedded System for Monitoring and Analysis of Electrocardiographic Signals - 2022 🩺💻
 
 [![Made With](https://img.shields.io/badge/Made%20with-Python%2C%20TensorFlow%2C%20ESP32-blue)](https://shields.io/)
-[![Institution](https://img.shields.io/badge/Institution-Your%20Institution%20Name-red)](https://shields.io/)
+[![University](https://img.shields.io/badge/University-IUT-orange)]()
 
 ---
 
